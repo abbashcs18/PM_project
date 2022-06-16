@@ -1,8 +1,8 @@
 
 import './Home.css';
-import Navbar from './Navbar/Navbar.js';
-import Interview from './Interview';
-import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
+import Navbar from "./Navbar.jsx"
+// import Interview from './Interview';
+// import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
 
 function Home() {
   return (
