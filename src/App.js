@@ -5,13 +5,14 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import IN from './components/IN';
 import Update_in from './components/Update_in';
+import Update_ac from './components/Update_ac';
 
 
 
 function App() {
   return (
     <div>
-      <Update_in/>
+      <Navbar></Navbar>
      
 
     </div>

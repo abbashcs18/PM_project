@@ -5,7 +5,7 @@ const Update_in = () => {
     return (
 
         <div className='bg-white px-[200px] py-2 my-5  mx-[400px] place-items-center rounded-md'>
-            <h1 className='text-black font-bold py-3 px-5 my-3 bg-orange-500 rounded-xl text-center'> ACCENTURE - CANDIDATE REGISTRATION</h1>
+            <h1 className='text-black font-bold py-3 px-5 my-3 bg-orange-500 rounded-xl text-center'> Update interview process</h1>
             <form class="w-full  max-w-lg">
 
                 <div class="flex flex-wrap -mx-3 mb-6">
