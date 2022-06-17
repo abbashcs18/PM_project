@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
 
         <Routes>
-            <Route exact path='/home' element={<Home/>}/>
+            <Route exact path='/' element={<Home/>}/>
             <Route exact path='/interview' element={<IN/>}/>
         </Routes>
         </Router>
