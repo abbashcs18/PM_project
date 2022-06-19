@@ -65,7 +65,7 @@ const IN = () => {
                 {/* </div> */}
                 <div className="flex justify-between items-center py-3 ">
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
+                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Back</button>
                 </div>
 
             </form>

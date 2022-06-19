@@ -12,7 +12,8 @@ import Update_ac from './components/Update_ac';
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
+     
+      <Home/>
      
 
     </div>
