@@ -8,49 +8,59 @@ const Update_in = () => {
             <h1 className='text-black font-bold py-3 px-5 my-3 bg-orange-500 rounded-xl text-center'> Update interview process</h1>
             <form class="w-full  max-w-lg">
 
-                <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="flex flex-wrap -mx-3 mb-6 ">
                    
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Candidate ID
+                 
+                    <div class="w-full px-3 my-5">
+                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                            Aptitude round statues(Y/N)&nbsp;
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                         <input  type="radio" name="option1" value="yes"/> yes &nbsp;
+                         <input  type="radio" name="option1" value="no"/> no     
+                        </div>
+                        
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Aptitude round statues(Y/N)
+                    <div class="w-full px-3 my-5">
+                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                            Tech-written statues(Y/N)&nbsp;
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                         <input  type="radio" name="option1" value="yes"/> yes &nbsp;
+                         <input  type="radio" name="option1" value="no"/> no     
+                        </div>
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Tech-written statues(Y/N)
+                    <div class="w-full px-3 my-5">
+                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                            Tech-interview (Y/N)&nbsp;
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                         <input  type="radio" name="option1" value="yes"/> yes &nbsp;
+                         <input  type="radio" name="option1" value="no"/> no     
+                        </div>
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Tech-interview (Y/N)
+                    <div class="w-full px-3 my-5">
+                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                            HR-interview statues (Y/N)&nbsp;
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
-
-                    </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            HR-interview statues (Y/N)
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                         <input  type="radio" name="option1" value="yes"/> yes &nbsp;
+                         <input  type="radio" name="option1" value="no"/> no     
+                        </div>
 
                     </div>
 
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                           Job role (Y/N)
+                    <div class="w-full px-3 my-5">
+                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                           Job role (Y/N)&nbsp;
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                         <input  type="radio" name="option1" value="yes"/> yes &nbsp;
+                         <input  type="radio" name="option1" value="no"/> no     
+                        </div>
 
                     </div>
                 </div>
@@ -63,7 +73,7 @@ const Update_in = () => {
                 {/* </div> */}
                 <div className="flex justify-between items-center py-3 ">
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Back</button>
+                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
                 </div>
 
             </form>

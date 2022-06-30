@@ -1,14 +1,15 @@
 
 import './Home.css';
-import Carouse from '../Carouse';
+import Carouse from '../carouse/Carouse';
 import Footer from '../Footer';
 
 
 
-
-
 function Home() {
+ 
+document.title = 'Home'
   return (
+ 
   <div className="App">
   
   <Carouse/>
@@ -28,11 +29,8 @@ function Home() {
   </div>
 
   
-
-
-
-     
   </div>
+
 
   );
 }

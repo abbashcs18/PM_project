@@ -7,7 +7,7 @@ import IN from './components/interview/IN';
 import Update_in from './components/interview/Update_in';
 import Update_ac from './components/interview/Update_ac';
 import Footer from './components/Footer';
-import Carouse from './components/Carouse';
+import Carouse from './components/carouse/Carouse';
 
 
 
@@ -15,7 +15,8 @@ import Carouse from './components/Carouse';
 function App() {
   return (
     <div>
-     <Navbar/>
+     
+    <Navbar/>
     </div>
   );
 }

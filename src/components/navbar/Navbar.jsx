@@ -2,6 +2,9 @@ import React from 'react'
 import Home from '../home/Home';
 import IN from '../interview/IN';
 import Login from '../login/Login';
+import wvf from '../images/WinVinayaAcademy.jpg'
+
+
 
 import {
     BrowserRouter as Router,
@@ -16,7 +19,7 @@ const Navbar = () => {
         <header>
         <Router>
         <div className="flex justify-between mx-auto p-6 bg-white text-orange-600 ">
-            <img className='h-12' src="https://2020.winvinayafoundation.org/wp-content/uploads/2020/11/New-WVF-logo2-scaled.jpg" alt="WVF logo" />
+            <img className='w-auto h-12' src={wvf} alt="WVF logo" />
             
             <div className='flex text-2xl px-6 font-medium '>
                 <Link  to="/" className='p-2 px-6'>Home</Link>
