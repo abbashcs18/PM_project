@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from '../home/Home';
-import IN from '../interview/IN';
+import FormComponent from '../Form/FormComponet';
 import Login from '../login/Login';
 import wvf from '../images/WinVinayaAcademy.jpg'
 
@@ -32,7 +32,7 @@ const Navbar = () => {
 
         <Routes>
             <Route exact path='/' element={<Home/>}/>
-            <Route exact path='/interview' element={<IN/>}/>
+            <Route exact path='/interview' element={<FormComponent/>}/>
             <Route exact path='/login' element={<Login/>}/>
         </Routes>
         </Router>

@@ -1,63 +1,62 @@
 import React from 'react'
-
+import classes from './stylesT'
 
 const Update_in = () => {
     return (
 
-        <div className='bg-white px-[200px] py-2 my-5  mx-[400px] place-items-center rounded-md'>
-            <h1 className='text-black font-bold py-3 px-5 my-3 bg-orange-500 rounded-xl text-center'> Update interview process</h1>
-            <form class="w-full  max-w-lg">
+        <div className={classes.Container}>
+            <h1 className={classes.heading}> Update interview process</h1>
+            <form class={classes.Form}>
 
-                <div class="flex flex-wrap -mx-3 mb-6 ">
+                <div class={classes.FormBox}>
                    
-                 
-                    <div class="w-full px-3 my-5">
-                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                    <div class={classes.labelWithradio}>
+                        <label class={classes.labelRadio}>
                             Aptitude round statues(Y/N)&nbsp;
                         </label>
-                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                        <div className={classes.Radio}>
                          <input  type="radio" name="option1" value="yes"/> yes &nbsp;
                          <input  type="radio" name="option1" value="no"/> no     
                         </div>
                         
 
                     </div>
-                    <div class="w-full px-3 my-5">
-                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                    <div class={classes.labelWithradio}>
+                        <label class={classes.labelRadio}>
                             Tech-written statues(Y/N)&nbsp;
                         </label>
-                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                        <div className={classes.Radio}>
                          <input  type="radio" name="option1" value="yes"/> yes &nbsp;
                          <input  type="radio" name="option1" value="no"/> no     
                         </div>
 
                     </div>
-                    <div class="w-full px-3 my-5">
-                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                    <div class={classes.labelWithradio}>
+                        <label class={classes.labelRadio}>
                             Tech-interview (Y/N)&nbsp;
                         </label>
-                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                        <div className={classes.Radio}>
                          <input  type="radio" name="option1" value="yes"/> yes &nbsp;
                          <input  type="radio" name="option1" value="no"/> no     
                         </div>
 
                     </div>
-                    <div class="w-full px-3 my-5">
-                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                    <div class={classes.labelWithradio}>
+                        <label class={classes.labelRadio}>
                             HR-interview statues (Y/N)&nbsp;
                         </label>
-                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                        <div className={classes.Radio}>
                          <input  type="radio" name="option1" value="yes"/> yes &nbsp;
                          <input  type="radio" name="option1" value="no"/> no     
                         </div>
 
                     </div>
 
-                    <div class="w-full px-3 my-5">
-                        <label class="absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10" for="grid-password">
+                    <div class={classes.labelWithradio}>
+                        <label class={classes.labelRadio}>
                            Job role (Y/N)&nbsp;
                         </label>
-                        <div className="relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]">
+                        <div className={classes.Radio}>
                          <input  type="radio" name="option1" value="yes"/> yes &nbsp;
                          <input  type="radio" name="option1" value="no"/> no     
                         </div>

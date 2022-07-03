@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
+import useStyle from './stylesT';
 
-
-
+const classes = useStyle;
 
 
 const IN = () => {
@@ -26,9 +26,9 @@ const IN = () => {
       
 
         
-   < div className='bg-white px-[200px] py-2 my-5  mx-[400px] rounded-md'>
+   <div className={classes.Container}>
 
-
+{/* 
             <div class="absolute inset-y-18  left-10 w-50 text-black-900 px-5 rounded-x bg-slate-300">
 
 
@@ -42,46 +42,47 @@ const IN = () => {
                 <li> Display Update academy progress</li>
 
             </ul>
-            </div>
+            </div> */}
 
 
-        <h1 className='text-black font-bold py-3 px-5 my-3 bg-orange-500 rounded-xl text-center'> ACCENTURE - CANDIDATE REGISTRATION</h1><form class="w-full  max-w-lg" onSubmit={handleSubmit}>
+        <h1 className={classes.heading}> ACCENTURE - CANDIDATE REGISTRATION</h1>
+        <form class="container mx-auto px-11" onSubmit={handleSubmit}>
 
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                <div class={classes.FormBox}>
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
                             Placement Drive ID
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" name="plied" value={name.plied} OnChange={(e) => setName(e.target.value)} />
+                        <input class={classes.input} type="text" name="plied" value={name.plied} OnChange={(e) => setName(e.target.value)} />
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
                             Candidate ID
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" name="clii" value={name.clid} onChange={(e) => setName(e.target.value)} />
+                        <input class={classes.input} type="text" name="clii" value={name.clid} onChange={(e) => setName(e.target.value)} />
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
                             Candidate Name
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <input class={classes.input} type="text" />
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
                             Batch Name
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+                        <input class={classes.input} type="text" />
 
                     </div>
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
                             Domain
                         </label>
                         <div class="relative">
-                            <select class="block appearance-none w-[320px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-4 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                            <select class={classes.input} id="grid-state">
                                 <option>IT</option>
                                 <option>BRA</option>
 
@@ -99,7 +100,7 @@ const IN = () => {
                     Type of Disability
                 </label>
                 <div class="relative">
-                    <select class="block appearance-none w-[320px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                    <select class={classes.input}>
                         <option>Deaf</option>
                         <option>Hard of hearing</option>
                         <option>hearing impaired</option>
