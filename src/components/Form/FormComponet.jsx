@@ -2,7 +2,7 @@ import React from 'react'
 import { Stepper, Step, StepLabel, Typegraphy, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import { useState } from 'react'
-
+import { IoThumbsUpOutline } from "react-icons/io5";
 import IN from '../interview/IN'
 import Update_ac from '../interview/Update_ac'
 import Update_in from '../interview/Update_in'
@@ -23,6 +23,17 @@ const useStyles = makeStyles({
         backgroundColor: "white",
         padding: "20px"
     },
+    complete:{
+        fontWeight:"bold",
+        color:"red",
+        padding:"50px",
+        fontSize:"50px",
+        textAlign:"center",
+        fontFamily:""
+        
+
+    },
+    
     
 })
 
@@ -54,7 +65,7 @@ function FormComponent() {
                 return <Update_in />;
             case 2:
                 return <Update_ac />;
-            default: return "Unknown Step";
+            default: return "Complete";
 
         }
     }
@@ -72,14 +83,14 @@ function FormComponent() {
                 ))}
             </Stepper>
             <>
-                {activeStep === steps.length ? "The Steps" : (
-                    <div >
+                {activeStep === steps.length ?<div className={classes.complete}> <h1><IoThumbsUpOutline className="absolute bottom-[410px] left-[980px] h-auto w-auto"/>COMPLETED!!!</h1> </div>: (
+                    <div className="flex-auto">
                         {getStepsContent(activeStep)}
-                        <Button style={{ background: "#F57C00", color: "black", fontWeight: "bold",margin: "30px" }} onClick={handleNext}>
+                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md" onClick={handleNext}>
                             {activeStep === steps.length ? "Finish" : "NEXT"}
                         </Button>
 
-                        <Button style={{ background: "#F57C00", color: "black", fontWeight: "bold", margin: "30px" }} className={classes.btn} onClick={handlePervious}>
+                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[550px]" onClick={handlePervious}>
                             {activeStep === steps.length ? "Finish" : "BACK"}
                         </Button>
                     </div>
