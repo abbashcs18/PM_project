@@ -1,88 +1,102 @@
 import React from 'react'
 import { useState } from 'react';
-import useStyle from './stylesT';
+import classes from './stylesT';
+import { formik, useFormik } from 'formik'
+import interviewSchema from '../schemas/schamas';
 
-const classes = useStyle;
+
 
 
 const IN = () => {
-    const [name,setName]= useState({});
+    
 
-    const handledchange=(event)=>{
-        event.preventDefault();
-        const plid=event.target.plid;
-        const clid=event.target.clid;
-        setName(values=>([name]))
-        
-    }
-    const handleSubmit=(event) => {
-        event.preventDefault();
-        console.log(name);
-    }
-    document.title = 'Interview'
+    const { values, errors, touched, handleChange, handleBlur } = useFormik({
+        initialValues: {
+            pId: "",
+            cId: "",
+            cName: "",
+            bName: "",
+            domain: "",
+            tOfD: "",
+        },
+        validationSchema: interviewSchema
+    })
+
+    console.log(values);
     return (
-        
-      
-      
-
-        
-   <div className={classes.Container}>
-
-{/* 
-            <div class="absolute inset-y-18  left-10 w-50 text-black-900 px-5 rounded-x bg-slate-300">
+        <div className={classes.Container}>
 
 
-
-                <ul type="circle">
-                <li> Candidate Registration  </li>
-                <li> Update Interview process </li>
-                <li> Update Academy progress  </li>
-                <li> Display Candidate Registration</li>
-                <li> Display Update interview process</li>
-                <li> Display Update academy progress</li>
-
-            </ul>
-            </div> */}
-
-
-        <h1 className={classes.heading}> ACCENTURE - CANDIDATE REGISTRATION</h1>
-        <form class="container mx-auto px-11" onSubmit={handleSubmit}>
+            <h1 className={classes.heading}> ACCENTURE - CANDIDATE REGISTRATION</h1>
+            <form class="container mx-auto px-11">
 
                 <div class={classes.FormBox}>
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Placement Drive ID
                         </label>
-                        <input class={classes.input} type="text" name="plied" value={name.plied} OnChange={(e) => setName(e.target.value)} />
+                        <input
+                            value={values.pId}
+                            id="pId"
+                            class={classes.input}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            type="text" />
 
                     </div>
+                    {errors.pId && touched.pId && <p className={classes.VaildE}>{errors.pId}</p>}
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Candidate ID
                         </label>
-                        <input class={classes.input} type="text" name="clii" value={name.clid} onChange={(e) => setName(e.target.value)} />
+                        <input
+                            value={values.cId}
+                            id="cId"
+                            class={classes.input}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            type="text" />
 
                     </div>
+                    {errors.cId && touched.cId && <p className={classes.VaildE}>{errors.cId}</p>}
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Candidate Name
                         </label>
-                        <input class={classes.input} type="text" />
+                        <input
+                            value={values.cName}
+                            id="cName"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            class={classes.input} type="text" />
 
                     </div>
+                    {errors.cName && touched.cName && <p className={classes.VaildE}>{errors.cName}</p>}
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Batch Name
                         </label>
-                        <input class={classes.input} type="text" />
+                        <input
+                            value={values.bName}
+                            id="bName"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            class={classes.input} type="text" />
 
                     </div>
+                    {errors.bName && touched.bName && <p className={classes.VaildE}>{errors.bName}</p>}
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Domain
                         </label>
                         <div class="relative">
-                            <select class={classes.input} id="grid-state">
+                            <select
+                                value={values.domain}
+                                id="domain"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                class={classes.input}>
+                                <option></option>
                                 <option>IT</option>
                                 <option>BRA</option>
 
@@ -92,6 +106,7 @@ const IN = () => {
                             </div>
                         </div>
                     </div>
+                    {errors.domain && touched.domain && <p className={classes.VaildE}>{errors.domain}</p>}
                 </div>
 
 
@@ -100,7 +115,13 @@ const IN = () => {
                     Type of Disability
                 </label>
                 <div class="relative">
-                    <select class={classes.input}>
+                    <select
+                        value={values.tOfD}
+                        onChange={handleChange}
+                        id="tOfD"
+                        onBlur={handleBlur}
+                        class={classes.input}>
+                        <option></option>
                         <option>Deaf</option>
                         <option>Hard of hearing</option>
                         <option>hearing impaired</option>
@@ -110,6 +131,8 @@ const IN = () => {
                     </div>
                 </div>
 
+                {errors.tOfD && touched.tOfD && <p className={classes.VaildE}>{errors.tOfD}</p>}
+
                 {/* </div> */}
                 <div className="flex justify-between items-center py-3 ">
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
@@ -118,21 +141,8 @@ const IN = () => {
 
             </form>
         </div>
-      
+
     )
 }
 
 export default IN
-
-
-const forms=()=>
-{
-    return (
-
-
-<div class="absolute h-32 w-32">
-<div class="absolute inset-y-0 left-0 w-16 text-white-900 bg-white">hello wotldsfdsfkjsdf</div>
-</div>
-
-    );
-}
