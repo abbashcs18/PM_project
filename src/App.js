@@ -9,15 +9,13 @@ import Update_ac from './components/interview/Update_ac';
 import Footer from './components/Footer';
 import Carouse from './components/carouse/Carouse';
 import FormComponent from './components/Form/FormComponet';
-
+import Test from './components/interview/Test'
 
 
 function App() {
   return (
-    <div>
-     
-    <IN/>
-
+    <div>   
+    <Navbar/>
 
     </div>
   );
