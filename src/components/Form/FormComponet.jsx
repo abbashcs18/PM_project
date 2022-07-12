@@ -18,23 +18,23 @@ const useStyles = makeStyles({
         "& .MuiStepIcon-root.Mui-completed": {
             color: "red"
         },
-        borderRadius:"25px",
+        borderRadius: "25px",
         color: "white",
         backgroundColor: "white",
         padding: "20px"
     },
-    complete:{
-        fontWeight:"bold",
-        color:"red",
-        padding:"50px",
-        fontSize:"50px",
-        textAlign:"center",
-        fontFamily:""
-        
+    complete: {
+        fontWeight: "bold",
+        color: "red",
+        padding: "50px",
+        fontSize: "50px",
+        textAlign: "center",
+        fontFamily: ""
+
 
     },
-    
-    
+
+
 })
 
 function FormComponent() {
@@ -76,14 +76,14 @@ function FormComponent() {
             <Stepper activeStep={activeStep} alternativeLabel >
                 {steps.map(label => (
                     <Step key={label}>
-                        <StepLabel className='font-bold'>
+                        <StepLabel class='font-bold'>
                             {label}
                         </StepLabel>
                     </Step>
                 ))}
             </Stepper>
             <>
-                {activeStep === steps.length ?<div className={classes.complete}> <h1><IoThumbsUpOutline className="absolute bottom-[410px] left-[980px] h-auto w-auto"/>COMPLETED!!!</h1> </div>: (
+                {activeStep === steps.length ? <div className={classes.complete}> <h1><IoThumbsUpOutline className="absolute bottom-[410px] left-[980px] h-auto w-auto" />COMPLETED!!!</h1> </div> : (
                     <div className="flex-auto">
                         {getStepsContent(activeStep)}
                         <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md" onClick={handleNext}>

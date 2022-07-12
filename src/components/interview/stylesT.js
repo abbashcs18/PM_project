@@ -8,7 +8,8 @@ const useStyle = {
     input:"appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
     labelWithradio:"w-full px-3 my-5",
     labelRadio:"absolute uppercase tracking-wide text-gray-700 text-xs font-bold mb-10",
-    Radio:"relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]"
+    Radio:"relative uppercase tracking-wide text-gray-700 text-xs font-bold ml-[250px]",
+    VaildE:"error text-red-700 text-sm ml-5 mb-2"
 }
 
 export default useStyle;
