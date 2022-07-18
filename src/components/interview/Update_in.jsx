@@ -1,38 +1,12 @@
-import React,{useState}from 'react'
+import React, { useState } from 'react'
 import classes from './stylesT'
 import interviewSchema from '../schemas/schamas'
 import { formik, useFormik } from 'formik'
 import Axios from 'axios'
 
-const Update_in = () => {
-    
 
-    const [listOfUsers,setListOfUsers] = useState([]);
-    
-    const createUser= () => {
-        Axios.post("http://localhost:5001/createUsers", {
-            Aptitude_round_statues:values.Aptitude_round_statues,
-            Tech_written_statues:values.Tech_written_statues,
-            Tech_interview:values.Tech_interview,
-            HR_interview_statues:values.HR_interview_statues,
-            Job_role:values.Job_role,
-          }).then((response) => {
-            setListOfUsers([...listOfUsers, this.email, this.age, this.password, this.confirmPassword]);
-          });
-        };
+const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
 
-    const { values, errors, touched, handleChange, handleBlur } = useFormik({
-        initialValues: {
-            Aptitude_round_statues:"",
-            Tech_written_statues:"",
-            Tech_interview:"",
-            HR_interview_statues:"",
-            Job_role:"",
-
-        },
-        validationSchema:interviewSchema
-    })
-    
     return (
 
 
@@ -41,46 +15,46 @@ const Update_in = () => {
             <form class={classes.Form}>
 
                 <div class={classes.FormBox}>
-                   
+
                     <div class={classes.labelWithradio}>
                         <label class={classes.labelRadio}>
                             Aptitude round statues(Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                         <input  type="radio"  name="option1" id="Aptitude_round_statues" value={values.Aptitude_round_statues} onChange={handleChange}
-                            onBlur={handleBlur}/> yes &nbsp;
-                         <input  type="radio" name="option1" id="Aptitude_round_statues" value={values.Aptitude_round_statues} onChange={handleChange}
-                            onBlur={handleBlur}/> no     
+                            <input type="radio" name="Aptitude_round_statues" value="yes" onChange={handleChange}
+                                onBlur={handleBlur} /> yes &nbsp;
+                            <input type="radio" name="Aptitude_round_statues" value="no" onChange={handleChange}
+                                onBlur={handleBlur} /> no
                         </div>
-                        
+
                     </div>
 
                     {errors.Aptitude_round_statues && touched.Aptitude_round_statues && <p className={classes.VaildE}>{errors.Aptitude_round_statues}</p>}
-                   
-                   
+
+
                     <div class={classes.labelWithradio}>
                         <label class={classes.labelRadio}>
                             Tech-written statues(Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                         <input  type="radio" name="option2" id="Tech_written_statues" value={values.Tech_written_statues} onChange={handleChange}
-                            onBlur={handleBlur}/> yes &nbsp;
-                         <input  type="radio" name="option2" id="Tech_written_statues" value={values.Tech_written_statues} onChange={handleChange}
-                            onBlur={handleBlur}/> no     
+                            <input type="radio" name="Tech_written_statues" value="yes" onChange={handleChange}
+                                onBlur={handleBlur} /> yes &nbsp;
+                            <input type="radio" name="Tech_written_statues" value="no" onChange={handleChange}
+                                onBlur={handleBlur} /> no
                         </div>
 
                     </div>
                     {errors.Tech_written_statues && touched.Tech_written_statues && <p className={classes.VaildE}>{errors.Tech_written_statues}</p>}
-                    
+
                     <div class={classes.labelWithradio}>
                         <label class={classes.labelRadio}>
                             Tech-interview (Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                         <input  type="radio" name="option3" id="Tech_interview" value={values.Tech_interview} onChange={handleChange}
-                            onBlur={handleBlur}/> yes &nbsp;
-                         <input  type="radio" name="option3" id="Tech_interview" value={values.Tech_interview} onChange={handleChange}
-                            onBlur={handleBlur}/> no     
+                            <input type="radio" name="Tech_interview" value="yes" onChange={handleChange}
+                                onBlur={handleBlur} /> yes &nbsp;
+                            <input type="radio" name="Tech_interview" value="no" onChange={handleChange}
+                                onBlur={handleBlur} /> no
                         </div>
 
                     </div>
@@ -91,10 +65,10 @@ const Update_in = () => {
                             HR-interview statues (Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                         <input  type="radio" name="option4" id="HR_interview_statues" value={values.HR_interview_statues} onChange={handleChange}
-                            onBlur={handleBlur} /> yes &nbsp;
-                         <input  type="radio" name="option4" id="HR_interview_statues" value={values.HR_interview_statues} onChange={handleChange}
-                            onBlur={handleBlur}/> no     
+                            <input type="radio" name="HR_interview_statues" value="yes" onChange={handleChange}
+                                onBlur={handleBlur} /> yes &nbsp;
+                            <input type="radio" name="HR_interview_statues" value="no" onChange={handleChange}
+                                onBlur={handleBlur} /> no
                         </div>
 
                     </div>
@@ -102,13 +76,13 @@ const Update_in = () => {
 
                     <div class={classes.labelWithradio}>
                         <label class={classes.labelRadio}>
-                           Job role (Y/N)&nbsp;
+                            Job role (Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                         <input  type="radio" name="option5" id="Job_role" value={values.Job_role} onChange={handleChange}
-                            onBlur={handleBlur}/> yes &nbsp;
-                         <input  type="radio" name="option5" id="Job_role" value={values.Job_role} onChange={handleChange}
-                            onBlur={handleBlur}/> no     
+                            <input type="radio" name="Job_role" value="yes" onChange={handleChange}
+                                onBlur={handleBlur} /> yes &nbsp;
+                            <input type="radio" name="Job_role" value="no" onChange={handleChange}
+                                onBlur={handleBlur} /> no
                         </div>
 
                     </div>
@@ -118,8 +92,8 @@ const Update_in = () => {
                 <div class="flex flex-wrap -mx-3 mb-2">
 
                     {/* <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0"> */}
-                
-                    </div>
+
+                </div>
                 {/* </div> */}
                 <div className="flex justify-between items-center py-3 ">
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>

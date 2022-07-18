@@ -12,6 +12,7 @@ const interviewSchema = yup.object().shape({
   Tech_interview: yup.string().required("Please select an option"),
   HR_interview_statues: yup.string().required("Please select an option"),
   Job_role: yup.string().required("Please select an option"),
+  score:yup.string().required("Placement score is required")
 });
 
 export default interviewSchema;

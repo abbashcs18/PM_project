@@ -13,6 +13,10 @@ import {
   } from "react-router-dom";
 
 
+  const NotFound = () => {
+  return <h2>Page Not found.</h2>;
+};
+
 const Navbar = () => {
     return (
         <header>
@@ -31,10 +35,11 @@ const Navbar = () => {
         </div>
 
         <Routes>
-            <Route exact path='/' element={<Home/>}/>
-            <Route exact path='/interview' element={<FormComponent/>}/>
-            <Route exact path='/about' element={<About/>}/>
-            <Route exact path='/login' element={<Login/>}/>
+            <Route path='/' element={<Home/>} exact={true}/>
+            <Route path='/interview' element={<FormComponent/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route component={NotFound} />
         </Routes>
         </Router>
         </header>
