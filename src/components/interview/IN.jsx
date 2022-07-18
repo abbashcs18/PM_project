@@ -8,38 +8,13 @@ import Axios from "axios";
 
 
 
-const IN = () => {
-    const [listOfUsers, setListOfUsers] = useState([]);
-
-    const createUser= () => {
-        Axios.post("http://localhost:5001/createUsers", {
-            pId:values.email,
-            cId:values.age,
-            cName:values.password,
-            bName:values.confirmPassword,
-            domain:values.domain,
-            tOfD:values.tOfD
-          }).then((response) => {
-            setListOfUsers([...listOfUsers, this.email, this.age, this.password, this.confirmPassword]);
-          });
-        };
-
-     const { values, errors, touched, handleChange, handleBlur } = useFormik({
-        initialValues: {
-            pId: "",
-            cId: "",
-            cName: "",
-            bName: "",
-            domain: "",
-            tOfD: "",
-        },
-        validationSchema: interviewSchema
-    })
+const IN = ({values,errors,touched,handleChange,handleBlur}) => {
+   
 
     console.log(values);
 
     const check=()=>{
-        if(!values)
+        if(values=="")
         {
             alert('Please fill with requirement');
         }
@@ -158,7 +133,7 @@ const IN = () => {
                 {/* </div> */}
                 
                 <div className="flex justify-between items-center py-3 ">
-               
+                <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
                 </div>
 

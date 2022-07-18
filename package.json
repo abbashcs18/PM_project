@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "better-react-carousel": "^1.1.1",
+    "cors": "^2.8.5",
     "eslint-config-react-app": "^7.0.1",
     "express": "^4.18.1",
     "formik": "^2.2.9",

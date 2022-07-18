@@ -35,27 +35,10 @@ const UserSchema= new mongoose.Schema(
             required:true,
         },
 
-        Aptitude_round_statues:{
+        score:{
             type:String,
             required:true,
-        },
-        Tech_written_statues:{
-            type:String,
-            required:true,
-            },
-            
-        Tech_interview:{
-            type:String,
-            required:true,
-        },
-        HR_interview_statues:{
-            type:String,
-            required:true,
-        },
-        Job_role:{
-            type:String,
-            required:true,
-        },
+        }
     }
 );
 
