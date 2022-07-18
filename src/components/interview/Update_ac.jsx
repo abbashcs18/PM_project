@@ -1,7 +1,13 @@
 import React from 'react'
 import classes from './stylesT'
+import interviewSchema from '../schemas/schamas'
+import { formik, useFormik } from 'formik'
 
 const Update_ac = () => {
+
+
+
+
     return (
         <div className={classes.Container}>
             <h1 className={classes.heading}> Update academy progress</h1>
@@ -18,7 +24,7 @@ const Update_ac = () => {
                     {/* </div> */}
                 <div className="flex justify-between items-center py-3 ">
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Back</button>
+                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
                 </div>
                     </div>
                 </div>

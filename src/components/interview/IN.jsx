@@ -4,11 +4,10 @@ import classes from './stylesT';
 import { formik, useFormik } from 'formik'
 import interviewSchema from '../schemas/schamas';
 
-
-
+import Axios from "axios";
 
 const IN = () => {
-    
+
 
     const { values, errors, touched, handleChange, handleBlur } = useFormik({
         initialValues: {
@@ -19,16 +18,40 @@ const IN = () => {
             domain: "",
             tOfD: "",
         },
-        validationSchema: interviewSchema
+        validationSchema: interviewSchema,
+        onSubmit: () => {
+            createUser();
+          },
     })
 
     console.log(values);
+
+    const [listOfUsers, setListOfUsers] = useState([]);
+
+    const createUser= () => {
+        Axios.post("http://localhost:5001/createUsers", {
+            pId:values.email,
+            cId:values.age,
+            cName:values.password,
+            bName:values.confirmPassword,
+            domain:values.domain,
+            tOfD:values.tOfD
+          }).then((response) => {
+            setListOfUsers([...listOfUsers, this.pId, this.cId, this.cName, this.bName, this.domain,this.tOfD]);
+          });
+        };
+
+
+    console.log(values);
+
+  
+
     return (
         <div className={classes.Container}>
 
 
             <h1 className={classes.heading}> ACCENTURE - CANDIDATE REGISTRATION</h1>
-            <form class="container mx-auto px-11">
+            <form class="container mx-auto px-11" onSubmit={createUser}>
 
                 <div class={classes.FormBox}>
                     <div class={classes.labelWithInput}>
@@ -134,9 +157,11 @@ const IN = () => {
                 {errors.tOfD && touched.tOfD && <p className={classes.VaildE}>{errors.tOfD}</p>}
 
                 {/* </div> */}
+                
                 <div className="flex justify-between items-center py-3 ">
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
+               
                     <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
+                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
                 </div>
 
             </form>

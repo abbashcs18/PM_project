@@ -9,11 +9,14 @@ import wvf5 from './wvf5.jpg'
 const Carouse = () => {
   return (
     <Carousel loop>
+       <Carousel.Item>
         <img className="block w-full"  src={wvf1} />
-  
+       </Carousel.Item>
+
       <Carousel.Item>
         <img className= "block w-full" src={wvf2} />
       </Carousel.Item>
+      
       <Carousel.Item>
         <img className="block w-full" src={wvf3} />
       </Carousel.Item>

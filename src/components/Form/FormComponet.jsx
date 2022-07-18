@@ -3,7 +3,7 @@ import { Stepper, Step, StepLabel, Typegraphy, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import { useState } from 'react'
 import { IoThumbsUpOutline } from "react-icons/io5";
-import IN from '../interview/IN'
+import IN,{values} from '../interview/IN'
 import Update_ac from '../interview/Update_ac'
 import Update_in from '../interview/Update_in'
 
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
             color: "red"
         },
         "& .MuiStepIcon-root.Mui-completed": {
-            color: "red"
+            color: "pink"
         },
         borderRadius: "25px",
         color: "white",
@@ -47,7 +47,10 @@ function FormComponent() {
     }
 
     const handleNext = () => {
-        setActiveStep(prevActiveStep => prevActiveStep + 1)
+        // if(!values)
+        //     alert('pls fill with requirement');
+        // else
+        setActiveStep(next => next + 1) 
     }
 
     const handlePervious = () => {
@@ -86,13 +89,15 @@ function FormComponent() {
                 {activeStep === steps.length ? <div className={classes.complete}> <h1><IoThumbsUpOutline className="absolute bottom-[410px] left-[980px] h-auto w-auto" />COMPLETED!!!</h1> </div> : (
                     <div className="flex-auto">
                         {getStepsContent(activeStep)}
-                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md" onClick={handleNext}>
+                        
+                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[80px]" onClick={handlePervious}>
+                            {activeStep === steps.length ? "Finish" : "BACK"}
+                        </Button>
+
+                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[420px]" onClick={handleNext}>
                             {activeStep === steps.length ? "Finish" : "NEXT"}
                         </Button>
 
-                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[550px]" onClick={handlePervious}>
-                            {activeStep === steps.length ? "Finish" : "BACK"}
-                        </Button>
                     </div>
                 )}
             </>
