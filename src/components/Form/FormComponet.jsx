@@ -28,10 +28,9 @@ const useStyles = makeStyles({
         padding: "20px"
     },
     complete: {
-        fontWeight: "bold",
-        color: "red",
+       
         padding: "50px",
-        fontSize: "50px",
+       
         textAlign: "center",
         fontFamily: ""
 
@@ -144,16 +143,18 @@ function FormComponent() {
             </Stepper>
             <>
 
-                {activeStep === steps.length ? <div className={classes.complete}> <h1><IoThumbsUpOutline className="absolute bottom-[410px] left-[980px] h-auto w-auto" />COMPLETED!!!</h1> </div> : (
+                {activeStep === steps.length ? <div class="py-[50px]">
+    <button className="bg-red-600 text-black font-bold p-3 rounded-md ml-[85px]">Edit</button>
+    <button className="bg-green-600 text-black font-bold p-3 rounded-md ml-[85px]">Confirm</button></div> : (
                     <div className="flex-auto">
                         {getStepsContent(activeStep)}
 
-                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[80px]" onClick={handlePervious}>
-                            {activeStep === steps.length ? "Finish" : "BACK"}
+                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[85px]" onClick={handlePervious}>
+                            {activeStep === steps.length ? "" : "BACK"}
                         </Button>
 
-                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[420px]" onClick={handleNext}>
-                            {activeStep === steps.length - 1 ? <Button onClick={createUser}> Submit </Button> : "NEXT"}
+                        <Button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[400px]" onClick={handleNext}>
+                            {activeStep === steps.length - 1 ? <Button class="bg-orange-600 text-black" onClick={createUser}> Submit </Button> : "NEXT"}
                         </Button>
 
                     </div>
@@ -164,5 +165,7 @@ function FormComponent() {
 
     )
 }
+
+
 
 export default FormComponent

@@ -7,14 +7,19 @@
   }
   
   .gr{
-    margin-top:-10%;
-    margin-left: 70%;
+    margin-top:10%;
+    margin-left: 60%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     word-spacing: 5px;
-    text-shadow: orange 1px 0px;
+    padding: 3%;
+    border-radius: 65px;
+    background: #e6740a;
+    webkit-animation:swing-top-fwd .4s cubic-bezier(.25,.46,.45,.94) alternate-reverse both;animation:swing-top-fwd .4s cubic-bezier(.25,.46,.45,.94) alternate-reverse both
   }
   
+ 
+
   .btn{
     color: white;
     background-color: rgb(226, 102, 0);

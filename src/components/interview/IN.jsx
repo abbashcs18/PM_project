@@ -31,6 +31,9 @@ const IN = ({ values, errors, touched, handleChange, handleBlur }) => {
 
                     </div>
                     {errors.pId && touched.pId && <p className={classes.VaildE}>{errors.pId}</p>}
+                    {values.pId.match(/[^1-9]/) ? <p className={classes.VaildE}>{errors.pId1}</p> : ""}
+                    
+            
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Candidate ID
@@ -45,6 +48,7 @@ const IN = ({ values, errors, touched, handleChange, handleBlur }) => {
 
                     </div>
                     {errors.cId && touched.cId && <p className={classes.VaildE}>{errors.cId}</p>}
+                    {values.cId.match(/[^1-9]/) ? <p className={classes.VaildE}>{errors.cId1}</p> : ""}
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Candidate Name
@@ -58,6 +62,7 @@ const IN = ({ values, errors, touched, handleChange, handleBlur }) => {
 
                     </div>
                     {errors.cName && touched.cName && <p className={classes.VaildE}>{errors.cName}</p>}
+                    
                     <div class={classes.labelWithInput}>
                         <label class={classes.label}>
                             Batch Name
@@ -122,9 +127,9 @@ const IN = ({ values, errors, touched, handleChange, handleBlur }) => {
                 {/* </div> */}
 
                 <div className="flex justify-between items-center py-3 ">
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
-                    <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="submit">Submit</button>
+                   
+                <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
+                  
                 </div>
 
             </form>
