@@ -16,7 +16,7 @@ import FormComponent from './components/Form/FormComponet';
 function App() {
   return (
     <div>   
-    <Navbar/>
+    <Navbar style={"position: fixed; top: 0;overflow: hidden;"}/>
 
     </div>
   );

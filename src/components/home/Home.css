@@ -15,9 +15,12 @@
     padding: 3%;
     border-radius: 65px;
     background: #e6740a;
-    webkit-animation:swing-top-fwd .4s cubic-bezier(.25,.46,.45,.94) alternate-reverse both;animation:swing-top-fwd .4s cubic-bezier(.25,.46,.45,.94) alternate-reverse both
+    -webkit-animation:slide-top .5s cubic-bezier(.25,.46,.45,.94) 3s infinite both;animation:slide-top .5s cubic-bezier(.25,.46,.45,.94) 3s infinite both;
   }
-  
+
+  .slide-top{
+    color: white;
+    -webkit-animation:slide-top .5s cubic-bezier(.25,.46,.45,.94) 3s infinite both;animation:slide-top .5s cubic-bezier(.25,.46,.45,.94) 3s infinite both}
  
 
   .btn{

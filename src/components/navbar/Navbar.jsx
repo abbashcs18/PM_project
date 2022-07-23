@@ -20,6 +20,7 @@ import {
 const Navbar = () => {
     return (
         <header>
+            
         <Router>
         <div className="flex justify-between mx-auto p-6 bg-white text-orange-600 ">
             <img className='w-auto h-12' src={wvf} alt="WVF logo" />

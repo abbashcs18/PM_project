@@ -5,6 +5,7 @@ import Footer from '../Footer';
 
 
 
+
 function Home() {
  
 document.title = 'Home'
@@ -15,12 +16,16 @@ document.title = 'Home'
   <Carouse/>
  
 
-  <div className="gr">
+  <div className="slide-top">
 
   <p>WinVinaya is the best platform to help <br></br> you enhance your skill, expands your knowledge and <br></br>prepare for techinical interviews</p>
 
-
   </div>
+
+
+
+
+
   <div className="wrap">
   <div className="layer layer1"></div>
   <div className="layer layer2"></div>
