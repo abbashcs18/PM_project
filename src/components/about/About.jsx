@@ -16,16 +16,17 @@ const About = () => {
         “Placements”
     </div>
     <div class=" text-2xl mt-5">
-    Symbiosis Skills and Professional University is Kerala’s first Skills University, based at Trivandrum which imparts industry required skills along with a strong foundation of knowledge to our students. The centres of excellence and learning factories on the campus provide practical training to students to simulate the real-life experience. Our industry partners have actively supported us in designing curriculum, expert guest sessions, sector-specific mentoring, onsite-visits, and interesting Internship projects. This ensures that our students are transformed into job-ready professionals.
+    Placements help trainees prepare for real-time interviews. They help to  improve the chances of getting hired. At WinVinaya, multiple mock interviews  are conducted for its trainees by handpicked industry experts. These experts  are busy professionals who are hard pressed for time to sit down and prepare  fresh questions for the interviews. The questions asked are to be aligned with the skill set of the trainee as mentioned in the resume. Further, if the candidate gets a feedback on how he/she fared in the interview and in which section or  topic he/she was weak, it would be helpful in improving their skills the next  time. An application which shall arrange the mock interview and generate  questions and also collect and generate feedback and statistics would be  beneficial for the training. Such an application would be available at the  fingertip ready to use. 
     </div>
-    <div class=" text-2xl mt-3">
-    The Yearly internships for our students are an integral part of their curriculum and a USP of our University. Students appreciate this unique model as they arrive back to campus, post each year of internships, with valuable learning experiences of Corporate Work Culture, and more sense of responsibility. Our placement team gives a lot of emphasis on grooming, presentation, communication, mock interviews, and overall personality development, to ensure that our students stand out differently.    </div>
+    <div class=" text-orange-600 text-4xl font-extrabold text-center mt-5">
+  
+    </div>
     <div class="text-2xl mt-3">
-    The internship and placement team is continuously engaged with all our corporate partners to provide complementary learning modules.
+    Placement is proposed to be a web-based application. The objective of  Placement is to develop a web application useful for interviews where the candidate can walk in free of mind and apply various technical topics.  Candidates could be scheduled according to their convenience.
         </div>
 
     <div class="text-2xl mt-3">
-    Our team’s response to Covid 19- We truly believe that students should not miss out on the chance of internships even during the lockdown. We have rolled out an innovative concept of ई – Internships where students are undergoing internship mini projects at home under the continuous guidance and mentorship of our Faculty and experts from the industry.
+
         </div>
 
 
