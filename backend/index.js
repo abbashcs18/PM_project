@@ -13,7 +13,7 @@ mongoose.connect(
   "mongodb+srv://root:root@cluster0.91ogx.mongodb.net/PMS?retryWrites=true&w=majority"
 );
 
-app.get("/getUsers", (req, res) => {
+app.get("/users", (req, res) => {
   UserModel.find({}, (err, result) => {
     if (err) {
       res.json(err);
@@ -30,6 +30,39 @@ app.post("/createUsers", async (req, res) => {
   await newUser.save();
   res.json(user);
 });
+
+
+app.get("/getUsers/:id", (req, res) => {
+  UserModel.findById(req.params.id, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
+app.delete("/getUsers/:id", (req, res) => {
+  UserModel.findByIdAndDelete(req.params.id, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
+
+app.put("/update/:id", (req, res) => {
+  UserModel.findByIdAndUpdate(req.params.id, {$set:req.body}, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
 
 
 const port = 5001;
