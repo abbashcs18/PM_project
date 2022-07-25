@@ -9,6 +9,7 @@ import Update_ac from './components/interview/Update_ac';
 import Footer from './components/Footer';
 import Carouse from './components/carouse/Carouse';
 import FormComponent from './components/Form/FormComponet';
+import Admin from './components/admin/Admin';
 
 
 
@@ -16,8 +17,8 @@ import FormComponent from './components/Form/FormComponet';
 function App() {
   return (
     <div>   
-    <Navbar/>
-
+    {/* <Navbar/> */}
+    <Admin/>
     </div>
   );
 }
