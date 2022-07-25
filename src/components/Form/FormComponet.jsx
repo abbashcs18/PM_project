@@ -9,7 +9,7 @@ import Update_in from '../interview/Update_in'
 import { formik, useFormik } from 'formik'
 import interviewSchema from '../schemas/schamas';
 import Axios from "axios";
-
+import Popup from './Popup'
 
 const useStyles = makeStyles({
     root: {
@@ -101,15 +101,26 @@ function FormComponent() {
         return ["CANDIDATE REGISTRATION", "UPDATE INTERVIEW PROCESS", "UPDATE ACADEMY PROCESS"]
     }
 
-    const handleNext = () => {
-        // if(!values)
-        //     alert('pls fill with requirement');
-        // else
+    function handleNext()  {
+    
+        // if(this.pID.values=="")
+        // {
+        //     alert("Please fill the requirement...");
+        //     return false;
+        // }
         setActiveStep(next => next + 1)
+        console.log("fail")
     }
+
 
     const handlePervious = () => {
         setActiveStep(prevActiveStep => prevActiveStep - 1)
+    }
+    const last=()=>{
+            setActiveStep(prevActiveStep => 0)
+    }
+    const Alert=()=>{
+
     }
 
     const steps = getSteps()
@@ -143,9 +154,10 @@ function FormComponent() {
             </Stepper>
             <>
 
-                {activeStep === steps.length ? <div class="py-[50px]">
-    <button className="bg-red-600 text-black font-bold p-3 rounded-md ml-[85px]">Edit</button>
-    <button className="bg-green-600 text-black font-bold p-3 rounded-md ml-[85px]">Confirm</button></div> : (
+                {activeStep === steps.length ? <div class="py-[40px]">
+    <button className="bg-red-600 text-black font-bold p-3 rounded-md ml-[200px] hover:bg-red-900 focus:outline-none" onClick={last}>
+            Edit</button>
+    <button className="bg-green-600 text-black font-bold p-3 rounded-md ml-[100px] hover:bg-green-900" onClick={Alert}>Confirm</button></div> : (
                     <div className="flex-auto">
                         {getStepsContent(activeStep)}
 

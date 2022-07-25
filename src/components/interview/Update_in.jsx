@@ -21,10 +21,10 @@ const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
                             Aptitude round statues(Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                            <input type="radio" name="Aptitude_round_statues" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Aptitude_round_statues" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
+                            <input type="radio" name="Aptitude_round_statues" value="Yes" onChange={handleChange}
+                                onBlur={handleBlur} /> Yes &nbsp;
+                            <input type="radio" name="Aptitude_round_statues" value="No" onChange={handleChange}
+                                onBlur={handleBlur} /> No
                         </div>
 
                     </div>
@@ -37,10 +37,10 @@ const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
                             Tech-written statues(Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                            <input type="radio" name="Tech_written_statues" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Tech_written_statues" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
+                            <input type="radio" name="Tech_written_statues" value="Yes" onChange={handleChange}
+                                onBlur={handleBlur} /> Yes &nbsp;
+                            <input type="radio" name="Tech_written_statues" value="No" onChange={handleChange}
+                                onBlur={handleBlur} /> No
                         </div>
 
                     </div>
@@ -51,10 +51,10 @@ const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
                             Tech-interview (Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                            <input type="radio" name="Tech_interview" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Tech_interview" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
+                            <input type="radio" name="Tech_interview" value="Yes" onChange={handleChange}
+                                onBlur={handleBlur} /> Yes &nbsp;
+                            <input type="radio" name="Tech_interview" value="No" onChange={handleChange}
+                                onBlur={handleBlur} /> No
                         </div>
 
                     </div>
@@ -65,10 +65,10 @@ const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
                             HR-interview statues (Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                            <input type="radio" name="HR_interview_statues" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="HR_interview_statues" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
+                            <input type="radio" name="HR_interview_statues" value="Yes" onChange={handleChange}
+                                onBlur={handleBlur} /> Yes &nbsp;
+                            <input type="radio" name="HR_interview_statues" value="No" onChange={handleChange}
+                                onBlur={handleBlur} /> No
                         </div>
 
                     </div>
@@ -79,10 +79,10 @@ const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
                             Job role (Y/N)&nbsp;
                         </label>
                         <div className={classes.Radio}>
-                            <input type="radio" name="Job_role" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Job_role" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
+                            <input type="radio" name="Job_role" value="Yes" onChange={handleChange}
+                                onBlur={handleBlur} /> Yes &nbsp;
+                            <input type="radio" name="Job_role" value="No" onChange={handleChange}
+                                onBlur={handleBlur} /> No
                         </div>
 
                     </div>

@@ -4,6 +4,7 @@ import FormComponent from '../Form/FormComponet';
 import Login from '../login/Login';
 import wvf from '../images/WinVinayaAcademy.jpg'
 import About from '../about/About';
+import NoFound from '../home/NoFound';
 
 import {
     BrowserRouter as Router,
@@ -13,13 +14,10 @@ import {
   } from "react-router-dom";
 
 
-  const NotFound = () => {
-  return <h2>Page Not found.</h2>;
-};
-
 const Navbar = () => {
     return (
         <header>
+            
         <Router>
         <div className="flex justify-between mx-auto p-6 bg-white text-orange-600 ">
             <img className='w-auto h-12' src={wvf} alt="WVF logo" />
@@ -39,7 +37,7 @@ const Navbar = () => {
             <Route path='/interview' element={<FormComponent/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route component={NotFound} />
+            <Route component={NoFound} />
         </Routes>
         </Router>
         </header>

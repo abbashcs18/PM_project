@@ -13,21 +13,23 @@ const About = () => {
     <>
         <div className="bg-white">
     <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
-        “From a tiny spark may burst a mighty flame” – Dante
+        “Placements”
     </div>
-    <div class="text-orange-700 text-2xl mt-5">
-        Mission
+    <div class=" text-2xl mt-5">
+    Placements help trainees prepare for real-time interviews. They help to  improve the chances of getting hired. At WinVinaya, multiple mock interviews  are conducted for its trainees by handpicked industry experts. These experts  are busy professionals who are hard pressed for time to sit down and prepare  fresh questions for the interviews. The questions asked are to be aligned with the skill set of the trainee as mentioned in the resume. Further, if the candidate gets a feedback on how he/she fared in the interview and in which section or  topic he/she was weak, it would be helpful in improving their skills the next  time. An application which shall arrange the mock interview and generate  questions and also collect and generate feedback and statistics would be  beneficial for the training. Such an application would be available at the  fingertip ready to use. 
     </div>
-    <div class="mt-3">
-        The primary aim of WinVinaya Foundation is to enable Persons with Disabilities (PWD), economically disadvantaged candidates and women with life skills and resources so that they can get a job and lead a life with dignity.
+    <div class=" text-orange-600 text-4xl font-extrabold text-center mt-5">
+  
     </div>
-    <div class="text-orange-700 text-2xl mt-3">
-        Genesis
-    </div>
+    <div class="text-2xl mt-3">
+    Placement is proposed to be a web-based application. The objective of  Placement is to develop a web application useful for interviews where the candidate can walk in free of mind and apply various technical topics.  Candidates could be scheduled according to their convenience.
+        </div>
 
-    <div class=" mt-3">In 2016, Shiva Jayagopal a Veteran in IT Industry who loves Coaching and Akila Sankar, a special educator with extensive experience working with Persons with Disabilities, who believes that “Anyone can learn” with the right methodology, decided to bring together both their strengths to Train Persons with Disabilities in IT Skills and place them in companies. WinVinaya Foundation was started in their home with few computers and few students. In just few years, WinVinaya Foundation trained hundreds of students across a wide range of disabilities and added more courses. The founders believe that this is just the beginning and with the collaboration with well-wishers and right partners, we can impact lives of millions of Persons with Disabilities.</div>
+    <div class="text-2xl mt-3">
 
-</div>
+        </div>
+
+
 
 
 <Carousel loop class="w-screen h-screen flex justify-center items-center">
@@ -47,7 +49,50 @@ const About = () => {
         <img className="block py-32" src={wvf5} />
     </Carousel.Item>
          </Carousel>
-         
+
+
+            <div class="bg-green-500 py-10">
+         <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
+         Contact Us
+         </div>
+    
+         <form class="mt-12 text-3xl font-extrabold text-center ">
+                  <div class="px-[600px]">
+                    <p>First Name</p>
+                      <input type="text" 
+                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your name.." />
+                  </div>
+                  <div class="mt-8 px-[600px]">
+                      <div>
+                            <p>Last Name</p>
+                          <input type="text"
+                          class="block lg:max-w-md font-normal px-4 py-2 mt-2 text-black bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your last name.." />
+                      </div>
+                      <div class="mb-10 mt-10">
+                    <p>Country</p>
+                    <select name="country" class="text-orange-600 mt-2">
+                    <option value="india">India</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    </select>
+                      </div>
+                      <p>Feedback</p>
+                      <div class="mt-2  ">
+                        
+                        <textarea class=" font-normal text-sm py-20 px-32  " placeholder="Write something.." ></textarea>
+                      </div>
+
+                      <div class="mt-8 ">
+                          <button
+                              class="w-44 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-orange-500 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-red-400">
+                              Submit
+                          </button>
+                      </div>
+                  </div>
+              </form>
+              </div>
+              </div>
+              
          <Footer/>
     </>
     )
