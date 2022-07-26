@@ -13,6 +13,7 @@ const UserSchema = new mongoose.Schema({
 
   Aptitude_round_statues: "",
   Tech_written_statues: "",
+  Tech_interview: "",
   HR_interview_statues: "",
   Job_role: "",
 

@@ -1,8 +1,12 @@
 import React from 'react'
 import Carousel from 'better-react-carousel'
 import Footer from '../Footer';
+<<<<<<< HEAD
 import emailjs from '@emailjs/browser';
 
+=======
+import Navbar from '../navbar/Navbar';
+>>>>>>> e8562f8c085aad238acdbd071eb3894ea3e4888b
 import wvf1 from './wvf1.jpg';
 import wvf2 from './wvf2.jpg';
 import wvf3 from './wvf3.jpg';
@@ -34,6 +38,7 @@ const About = () => {
 
   return (
     <>
+    <Navbar/>
         <div className="bg-white">
     <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
         “Placements”
@@ -82,7 +87,7 @@ const About = () => {
 
 
 
-            {/* <div class="bg-green-500 py-10">
+             <div class="bg-green-500 py-10">
          <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
          Contact Us
          </div>
@@ -122,7 +127,7 @@ const About = () => {
                       </div>
                   </div>
               </form>
-              </div> */}
+              </div> 
               </div>
               
          <Footer/>

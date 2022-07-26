@@ -1,9 +1,8 @@
 
 import './Home.css';
 import Carouse from '../carouse/Carouse';
+import Navbar from '../navbar/Navbar';
 import Footer from '../Footer';
-
-
 
 
 function Home() {
@@ -12,7 +11,7 @@ document.title = 'Home'
   return (
  
   <div className="App">
-  
+    <Navbar/>
   <Carouse/>
  
 
