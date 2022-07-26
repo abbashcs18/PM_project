@@ -13,21 +13,28 @@ import ViewUsers from "./components/admin/ViewUsers";
 import EditUser from "./components/admin/EditUser";
 import Admin from "./components/admin/Admin";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, Link, Routes, useLocation } from "react-router-dom";
+
 
 function App() {
+  const location = useLocation();
+
+  console.log("hash", location.hash);
+  console.log("pathname", location.pathname);
+  console.log("search", location.search);
+
   return (
     <div>
       {/* <Navbar style={"position: fixed; top: 0;overflow: hidden;"}/> */}
-      <BrowserRouter>
+
         <Routes>
           <Route path="/users" element={<Admin />}>
-            <Route path="/edit" element={<EditUser />}>
-              <Route path="/viewUsers" element={<ViewUsers />} />
+            <Route path="edit/:id" element={<EditUser />}>
+              <Route path="viewUsers/:id" element={<ViewUsers />} />
             </Route>
           </Route>
         </Routes>
-      </BrowserRouter>
+
     </div>
   );
 }
