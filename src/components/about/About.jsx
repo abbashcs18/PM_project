@@ -1,14 +1,37 @@
 import React from 'react'
 import Carousel from 'better-react-carousel'
 import Footer from '../Footer';
+import emailjs from '@emailjs/browser';
 
 import wvf1 from './wvf1.jpg';
 import wvf2 from './wvf2.jpg';
 import wvf3 from './wvf3.jpg';
 import wvf4 from './wvf4.jpg';
 import wvf5 from './wvf5.jpg'
+import { useState } from 'react';
+
+const Result =()=>{
+    return(
+        <p>Your message has been successfully sent. I will contact you soon</p>
+    )
+}
 
 const About = () => {
+    const[result, showResult]=useState(false)
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('gmail', 'template_iyzufur', e.target, 'xZlyJYJV5If4qiIAF')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
+          showResult(true)
+
+      };
+
   return (
     <>
         <div className="bg-white">
@@ -51,22 +74,30 @@ const About = () => {
          </Carousel>
 
 
-            <div class="bg-green-500 py-10">
+
+
+
+
+
+
+
+
+            {/* <div class="bg-green-500 py-10">
          <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
          Contact Us
          </div>
     
-         <form class="mt-12 text-3xl font-extrabold text-center ">
+         <form  class="mt-12 text-3xl font-extrabold text-center  " onSubmit={sendEmail}>
                   <div class="px-[600px]">
                     <p>First Name</p>
-                      <input type="text" 
-                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your name.." />
+                      <input type="text"  name="first_name"
+                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your name.." required/>
                   </div>
                   <div class="mt-8 px-[600px]">
                       <div>
                             <p>Last Name</p>
-                          <input type="text"
-                          class="block lg:max-w-md font-normal px-4 py-2 mt-2 text-black bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your last name.." />
+                          <input type="text" name="last_name"
+                          class="block lg:max-w-md font-normal px-4 py-2 mt-2 text-black bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your last name.." required/>
                       </div>
                       <div class="mb-10 mt-10">
                     <p>Country</p>
@@ -79,7 +110,7 @@ const About = () => {
                       <p>Feedback</p>
                       <div class="mt-2  ">
                         
-                        <textarea class=" font-normal text-sm py-20 px-32  " placeholder="Write something.." ></textarea>
+                        <textarea name="message" class=" font-normal text-sm py-20 px-32  " placeholder="Write something.." ></textarea>
                       </div>
 
                       <div class="mt-8 ">
@@ -87,10 +118,11 @@ const About = () => {
                               class="w-44 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-orange-500 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-red-400">
                               Submit
                           </button>
+                          <div className='row'> {result ? <Result/>:null}</div>
                       </div>
                   </div>
               </form>
-              </div>
+              </div> */}
               </div>
               
          <Footer/>
