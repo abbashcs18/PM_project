@@ -12,29 +12,28 @@ import FormComponent from "./components/Form/FormComponet";
 import ViewUsers from "./components/admin/ViewUsers";
 import EditUser from "./components/admin/EditUser";
 import Admin from "./components/admin/Admin";
+import NoFound from "./components/home/NoFound";
+import About from "./components/about/About";
 
-import { Route, Link, Routes, useLocation } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const location = useLocation();
-
-  console.log("hash", location.hash);
-  console.log("pathname", location.pathname);
-  console.log("search", location.search);
 
   return (
     <div>
-      {/* <Navbar style={"position: fixed; top: 0;overflow: hidden;"}/> */}
-
+      {/* <Navbar/> */}
+      <Router>
         <Routes>
-          <Route path="/users" element={<Admin />}>
-            <Route path="edit/:id" element={<EditUser />}>
-              <Route path="viewUsers/:id" element={<ViewUsers />} />
-            </Route>
-          </Route>
+          <Route path="/home" element={<Home />} />
+          <Route path="/interview" element={<FormComponent />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Login/>} exact={true} />
+          <Route path="/admin/edit/:id" element={<EditUser />} />
+          <Route path="/admin/user/:id" element={<ViewUsers />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<NoFound />} />
         </Routes>
-
+      </Router>
     </div>
   );
 }

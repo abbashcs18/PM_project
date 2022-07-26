@@ -32,7 +32,7 @@ app.post("/createUsers", async (req, res) => {
 });
 
 
-app.get("/getUsers/:id", (req, res) => {
+app.get("/user/:id", (req, res) => {
   UserModel.findById(req.params.id, (err, result) => {
     if (err) {
       res.json(err);

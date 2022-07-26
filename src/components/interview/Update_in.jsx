@@ -12,84 +12,118 @@ const Update_in = ({ values, errors, touched, handleChange, handleBlur }) => {
 
         <div className={classes.Container}>
             <h1 className={classes.heading}> Update interview process</h1>
-            <form class={classes.Form}>
+            <form class="container mx-auto px-11">
 
                 <div class={classes.FormBox}>
 
-                    <div class={classes.labelWithradio}>
-                        <label class={classes.labelRadio}>
-                            Aptitude round statues(Y/N)&nbsp;
+                <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
+                        Aptitude round statues
                         </label>
-                        <div className={classes.Radio}>
-                            <input type="radio" name="Aptitude_round_statues" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Aptitude_round_statues" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
-                        </div>
-
+                   
+                    <select
+                              
+                                value={values.Aptitude_round_statues}
+                                id="Aptitude_round_statues"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                className={classes.input}>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+ 
+                            </select>
+                 
                     </div>
 
                     {errors.Aptitude_round_statues && touched.Aptitude_round_statues && <p className={classes.VaildE}>{errors.Aptitude_round_statues}</p>}
 
 
-                    <div class={classes.labelWithradio}>
-                        <label class={classes.labelRadio}>
-                            Tech-written statues(Y/N)&nbsp;
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
+                            Tech written statues
                         </label>
-                        <div className={classes.Radio}>
-                            <input type="radio" name="Tech_written_statues" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Tech_written_statues" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
-                        </div>
-
+                   
+                    <select
+                               
+                                value={values.Tech_written_statues}
+                                id="Tech_written_statues"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                className={classes.input}>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+ 
+                            </select>
+                    
                     </div>
                     {errors.Tech_written_statues && touched.Tech_written_statues && <p className={classes.VaildE}>{errors.Tech_written_statues}</p>}
 
-                    <div class={classes.labelWithradio}>
-                        <label class={classes.labelRadio}>
-                            Tech-interview (Y/N)&nbsp;
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
+                            Tech Interview
                         </label>
-                        <div className={classes.Radio}>
-                            <input type="radio" name="Tech_interview" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Tech_interview" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
-                        </div>
-
+                   
+                    <select
+                               
+                                value={values.Tech_interview}
+                                id="Tech_interview"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                className={classes.input}>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+ 
+                            </select>
                     </div>
+                    
                     {errors.Tech_interview && touched.Tech_interview && <p className={classes.VaildE}>{errors.Tech_interview}</p>}
 
-                    <div class={classes.labelWithradio}>
-                        <label class={classes.labelRadio}>
-                            HR-interview statues (Y/N)&nbsp;
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
+                        HR interview statues
                         </label>
-                        <div className={classes.Radio}>
-                            <input type="radio" name="HR_interview_statues" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="HR_interview_statues" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
-                        </div>
-
+                   
+                    <select
+                               
+                                value={values.HR_interview_statues}
+                                id="HR_interview_statues"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                className={classes.input}>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+ 
+                            </select>
                     </div>
+                    
                     {errors.HR_interview_statues && touched.HR_interview_statues && <p className={classes.VaildE}>{errors.HR_interview_statues}</p>}
 
-                    <div class={classes.labelWithradio}>
-                        <label class={classes.labelRadio}>
-                            Job role (Y/N)&nbsp;
+                    <div class={classes.labelWithInput}>
+                        <label class={classes.label}>
+                        Job role
                         </label>
-                        <div className={classes.Radio}>
-                            <input type="radio" name="Job_role" value="yes" onChange={handleChange}
-                                onBlur={handleBlur} /> yes &nbsp;
-                            <input type="radio" name="Job_role" value="no" onChange={handleChange}
-                                onBlur={handleBlur} /> no
-                        </div>
-
+                   
+                    <select
+                                value={values.Job_role}
+                                id="Job_role"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                className={classes.input}>
+                               <option></option>    
+                                <option>Yes</option>
+                                <option>No</option>
+ 
+                            </select>
+                    </div>
                     </div>
                     {errors.Job_role && touched.Job_role && <p className={classes.VaildE}>{errors.Job_role}</p>}
                     
 
-                </div>
+                
                 <div class="flex flex-wrap -mx-3 mb-2">
 
                     {/* <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0"> */}
