@@ -29,8 +29,8 @@ const Admin = () => {
         <div className="">
             <NavbarAdmin />
             <div className="overflow-x-auto relative">
-                <h1 className=" text-white bg-gray-700 text-4xl font-bold">Admin</h1>
-                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <h1 className=" text-white  text-4xl font-bold">Candidates</h1>
+                <table className="w-3/4 mt-4 m-auto rounded-2xl text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="p-6">PLACEMENT DRIVE ID</th>
@@ -47,20 +47,19 @@ const Admin = () => {
                                 <td class="py-4 px-6">{user.cId}</td>
                                 <td class="py-4 px-6">{user.cName}</td>
                                 <td class="py-4 px-6">{user.bName}</td>
-                                <td class="py-4 px-6">
-
-                                    <Link className=" bg-blue-600 text-black font-bold p-3 rounded-md" to={`user/${user._id}`}>
+                                <td class=" py-4 px-6">
+                                    <Link className=" bg-blue-600 text-black font-bold p-3 rounded-md m-1" to={`user/${user._id}`}>
                                         View
                                     </Link>
                                     <Link
-                                        className=" bg-white text-black font-bold p-3 rounded-md"
+                                        className=" bg-white text-black font-bold p-3 rounded-md m-1"
                                         to={`edit/${user._id}`}
                                     >
                                         Edit
                                     </Link>
 
                                     <button
-                                        className=" bg-red-600 text-black font-bold p-3 rounded-md"
+                                        className=" bg-red-600 text-black font-bold p-3 rounded-md m-1"
                                         onClick={() => deleteUser(user._id)}
                                     >
                                         Delete

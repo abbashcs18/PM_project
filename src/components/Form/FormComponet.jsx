@@ -10,6 +10,7 @@ import { formik, useFormik } from 'formik'
 import interviewSchema from '../schemas/schamas';
 import Axios from "axios";
 import Navbar from '../navbar/Navbar';
+import NavLogout from '../navbar/NavLogout';
 import Popup from './Popup'
 
 const useStyles = makeStyles({
@@ -149,7 +150,7 @@ function FormComponent() {
 
     return (
         <div>
-            <Navbar />
+            <NavLogout />
 
             <div className={classes.root}>
                 <form onSubmit={handleSubmit}>

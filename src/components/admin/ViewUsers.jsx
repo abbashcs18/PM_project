@@ -32,16 +32,19 @@ const ViewUsers = () => {
 
   console.log(user)
   return (
-    
+
     <div className=" text-white ">
-      <NavbarAdmin/>
-      <Link className=" mt-10 bg-red-600 text-white font-bold p-3 rounded-md" to="/admin">
-        back to Home
-      </Link>
-      <h1 className=" mt-9 font-bold ">User Id: {user.pId}</h1>
-      <hr />
-      <ul className=" align-items: center items-center text-xl font-medium text-gray-900  rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white ">
-        <li className="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Placement Drive ID: { user.pId}</li>
+      <NavbarAdmin />
+      <div className="mt-10">
+        <Link className=" bg-orange-600 text-white font-bold p-3 rounded-md" to="/admin">
+          Back
+        </Link>
+      </div>
+      
+      
+      <ul className=" w-2/4 mt-5 m-auto align-items: center items-center text-xl font-medium text-gray-600  rounded-lg border  dark:bg-white  dark:text-black ">
+      <h1 className=" mb-9 font-bold text-2xl ">Placement Id: {user.pId}</h1>  
+      <hr className="" />
         <li className="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Candidate ID: {user.cId}</li>
         <li className="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Candidate Name: {user.cName}</li>
         <li className="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Batch Name: {user.bName}</li>

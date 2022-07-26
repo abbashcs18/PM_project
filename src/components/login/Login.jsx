@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
+import NavLogout from '../navbar/NavLogout';
 
 import {
   Link
