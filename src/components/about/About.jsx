@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'better-react-carousel'
 import Footer from '../Footer';
-
+import Navbar from '../navbar/Navbar';
 import wvf1 from './wvf1.jpg';
 import wvf2 from './wvf2.jpg';
 import wvf3 from './wvf3.jpg';
@@ -11,6 +11,7 @@ import wvf5 from './wvf5.jpg'
 const About = () => {
   return (
     <>
+    <Navbar/>
         <div className="bg-white">
     <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
         “Placements”

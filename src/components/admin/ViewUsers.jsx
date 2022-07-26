@@ -35,7 +35,7 @@ const ViewUsers = () => {
     
     <div className=" text-white ">
       <NavbarAdmin/>
-      <Link className=" mt-10 bg-red-600 text-white font-bold p-3 rounded-md" to="/">
+      <Link className=" mt-10 bg-red-600 text-white font-bold p-3 rounded-md" to="/admin">
         back to Home
       </Link>
       <h1 className=" mt-9 font-bold ">User Id: {user.pId}</h1>

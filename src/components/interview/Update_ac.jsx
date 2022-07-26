@@ -7,6 +7,7 @@ import Axios from "axios";
 const Update_ac = ({values,errors,touched,handleChange,handleBlur}) => {
     
     return (
+
         <div className={classes.Container}>
             <h1 className={classes.heading}> Update academy progress</h1>
             <form class={classes.Form} >

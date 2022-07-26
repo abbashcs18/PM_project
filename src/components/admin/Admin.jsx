@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import NavbarAdmin from "./NavbarAdmin";
+
+import EditUser from '../admin/EditUser';
+import ViewUsers from '../admin/ViewUsers';
+import NoFound from "../home/NoFound";
 
 
 const Admin = () => {
@@ -44,17 +48,17 @@ const Admin = () => {
                                 <td class="py-4 px-6">{user.cName}</td>
                                 <td class="py-4 px-6">{user.bName}</td>
                                 <td class="py-4 px-6">
-                                    
-                                        <Link className=" bg-blue-600 text-black font-bold p-3 rounded-md" to={`user/${user._id}`}>
-                                            View
-                                        </Link>
-                                        <Link
-                                            className=" bg-white text-black font-bold p-3 rounded-md"
-                                            to={`edit/${user._id}`}
-                                        >
-                                            Edit
-                                        </Link>
-                                    
+
+                                    <Link className=" bg-blue-600 text-black font-bold p-3 rounded-md" to={`user/${user._id}`}>
+                                        View
+                                    </Link>
+                                    <Link
+                                        className=" bg-white text-black font-bold p-3 rounded-md"
+                                        to={`edit/${user._id}`}
+                                    >
+                                        Edit
+                                    </Link>
+
                                     <button
                                         className=" bg-red-600 text-black font-bold p-3 rounded-md"
                                         onClick={() => deleteUser(user._id)}
@@ -67,6 +71,9 @@ const Admin = () => {
                     </tbody>
                 </table>
             </div>
+
+            
+
         </div>
     );
 };
