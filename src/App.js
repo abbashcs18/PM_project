@@ -19,19 +19,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div>
-      {/* <Navbar/> */}
-      <div>
-        {/* <Navbar/> */}
+      <Navbar/>
+      {/* <div>
+        <Navbar/>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Admin />} />
-            {/* <Route path="/" element={<Navbar />} /> */}
+            <Route path="/admin" element={<Admin />} />
+            <Route exact={true} path="/" element={<Navbar />} />
             <Route path="edit/:id" element={<EditUser />} />
             <Route path="user/:id" element={<ViewUsers />} />
             <Route path="*" element={<NoFound />} />
           </Routes>
         </BrowserRouter>
-      </div>
+      </div> */}
     </div>
   );
 }
