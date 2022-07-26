@@ -13,34 +13,31 @@ import ViewUsers from "./components/admin/ViewUsers";
 import EditUser from "./components/admin/EditUser";
 import Admin from "./components/admin/Admin";
 import NoFound from "./components/home/NoFound";
-import NavbarAdmin from './components/admin/NavbarAdmin';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+
+import About from "./components/about/About";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <div>
+
+      {/* <Navbar/> */}
       <Router>
         <Routes>
-
-        <Route path='/home' element={<Navbar/>} exact={true} />
-        <Route path='/admin' element={<NavbarAdmin/>}/>
-      
-         
+          <Route path="/home" element={<Home />} />
+          <Route path="/interview" element={<FormComponent />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Login/>} exact={true} />
+          <Route path="/admin/edit/:id" element={<EditUser />} />
+          <Route path="/admin/user/:id" element={<ViewUsers />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<NoFound />} />
         </Routes>
-        </Router>
-
-
-        <Link  to="/home" className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> Candidate </Link>
-        <Link to='/admin' className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> Admin </Link>
-
+      </Router>
     </div>
- 
+
   );
 }
 

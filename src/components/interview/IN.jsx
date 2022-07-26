@@ -4,17 +4,23 @@ import classes from './stylesT';
 import { formik, useFormik } from 'formik'
 import interviewSchema from '../schemas/schamas';
 
+
 import Axios from "axios";
 
 
-
 const IN = ({ values, errors, touched, handleChange, handleBlur }) => {
+
+    function handleSubmit(){
+        if(values.pId=="")
+            alert('plsssssssss')
+    }
     return (
+        <>
         <div className={classes.Container}>
 
 
             <h1 className={classes.heading}> ACCENTURE - CANDIDATE REGISTRATION</h1>
-            <form class="container mx-auto px-11">
+            <form class="container mx-auto px-11" >
 
                 <div class={classes.FormBox}>
                     <div class={classes.labelWithInput}>
@@ -129,11 +135,13 @@ const IN = ({ values, errors, touched, handleChange, handleBlur }) => {
                 <div className="flex justify-between items-center py-3 ">
                    
                 <button className=' bg-orange-600 text-black font-bold p-3 rounded-md' type="reset">Clear</button>
+                
                   
                 </div>
 
             </form>
         </div>
+        </>
 
     )
 }
