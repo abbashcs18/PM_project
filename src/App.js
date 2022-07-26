@@ -13,15 +13,33 @@ import ViewUsers from "./components/admin/ViewUsers";
 import EditUser from "./components/admin/EditUser";
 import Admin from "./components/admin/Admin";
 import NoFound from "./components/home/NoFound";
+import NavbarAdmin from './components/admin/NavbarAdmin';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-  
-       <Navbar/>
-      </div>
+      <Router>
+        <Routes>
+
+        <Route path='/home' element={<Navbar/>} exact={true} />
+        <Route path='/admin' element={<NavbarAdmin/>}/>
+      
+         
+        </Routes>
+        </Router>
+
+
+        <Link  to="/home" className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> Candidate </Link>
+        <Link to='/admin' className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> Admin </Link>
+
+    </div>
  
   );
 }

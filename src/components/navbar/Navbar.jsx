@@ -31,28 +31,22 @@ const Navbar = () => {
             <img className='w-auto h-12' src={wvf} alt="WVF logo" />
             
             <div className='flex text-2xl px-6 font-medium '>
-                <Link  to="/home" className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> Home </Link>
-                <Link to='/about' className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> About </Link>
-                <Link style={{pointerEvents:"none"}} to='/interview' className=" p-1 px-6 w-full hover:bg-orange-100 focus:outline-none ">Interview</Link>
-                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-                <Link  to="/" className='p-1 px-8  hover:bg-orange-100 focus:outline-none '>Login</Link> 
+                <Link  to="/" className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> Home </Link>
+                <Link to='/home/about' className='p-1 px-6 w-full hover:bg-orange-100 focus:outline-none '> About </Link>
+                {/* <Link style={{{count}==1?pointerEvents:"none":""}} to='/interview' className=" p-1 px-6 w-full hover:bg-orange-100 focus:outline-none ">Interview</Link> */}
+               
+                <Link  to="/home/login" className='p-1 px-8  hover:bg-orange-100 focus:outline-none '>Login</Link> 
             </div>
         </div>
 
         <Routes>
 
-            <Route path='/home' element={<Home/>} />
-            <Route path='/interview' element={<FormComponent/>}/>
-            <Route path='/about' element={<About/>}/>
-            <Route path='/' element={<Login/>} exact={true}/>
+        <Route path='/' element={<Home/>} exact={true} />
+        <Route path='home/interview' element={<FormComponent/>}/>
+        <Route path='home/about' element={<About/>}/>
+        <Route path='home/login' element={<Login/>} />
             
-          <Route path="/admin" element={<Admin />} />
-          <Route path="edit/:id" element={<EditUser />} />
-          <Route path="user/:id" element={<ViewUsers />} />
-          <Route path="*" element={<NoFound />} />
-            <Route component={NoFound} />
+         
         </Routes>
         </Router>
         </header>
