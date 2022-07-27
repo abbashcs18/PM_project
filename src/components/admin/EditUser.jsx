@@ -112,7 +112,7 @@ const EditUser = () => {
                                 <select
                                     placeholder="Domain: "
                                     value={domain}
-                                    id="domain"
+                                    name="domain"
                                     onChange={e => onInputChange(e)}
 
                                     className={classes.input}>
@@ -132,7 +132,7 @@ const EditUser = () => {
                                 <select
                                     value={tOfD}
                                     onChange={e => onInputChange(e)}
-                                    id="tOfD"
+                                    name="tOfD"
                                     placeholder=" Type of Disability"
                                     className={classes.input}>
                                     <option></option>
@@ -152,7 +152,7 @@ const EditUser = () => {
                                 <select
                                     placeholder="Aptitude round statues: "
                                     value={Aptitude_round_statues}
-                                    id="Aptitude_round_statues"
+                                    name="Aptitude_round_statues"
                                     onChange={e => onInputChange(e)}
                                     className={classes.input}>
                                     <option></option>
@@ -171,7 +171,7 @@ const EditUser = () => {
                                 <select
                                     placeholder="Tech-written statues: "
                                     value={Tech_written_statues}
-                                    id="Tech_written_statues"
+                                    name="Tech_written_statues"
                                     onChange={e => onInputChange(e)}
 
                                     className={classes.input}>
@@ -191,7 +191,7 @@ const EditUser = () => {
                                 <select
                                     placeholder="HR-interview statues: "
                                     value={HR_interview_statues}
-                                    id="HR_interview_statues"
+                                    name="HR_interview_statues"
                                     onChange={e => onInputChange(e)}
 
                                     className={classes.input}>
@@ -211,7 +211,7 @@ const EditUser = () => {
                                 <select
                                     placeholder="Job role: "
                                     value={Job_role}
-                                    id="Job_role"
+                                    name="Job_role"
                                     onChange={e => onInputChange(e)}
 
                                     className={classes.input}>

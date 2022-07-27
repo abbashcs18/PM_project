@@ -33,6 +33,7 @@ const Admin = () => {
                 <table className="w-3/4 mt-4 m-auto rounded-2xl text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
+                        <th scope="col" class="p-6">No ID</th>
                             <th scope="col" class="p-6">PLACEMENT DRIVE ID</th>
                             <th scope="col" class="p-6">CANDIDATE ID</th>
                             <th scope="col" class="p-6">CANDIDATE NAME</th>
@@ -44,6 +45,7 @@ const Admin = () => {
                         {users.map((user, index) => (
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white" >{index + 1}</th>
+                                <th class="py-4 px-6" >{user.pId}</th>
                                 <td class="py-4 px-6">{user.cId}</td>
                                 <td class="py-4 px-6">{user.cName}</td>
                                 <td class="py-4 px-6">{user.bName}</td>
