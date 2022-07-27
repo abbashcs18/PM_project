@@ -12,6 +12,7 @@ import Axios from "axios";
 import Navbar from '../navbar/Navbar';
 import NavLogout from '../navbar/NavLogout';
 import Popup from './Popup'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
@@ -49,6 +50,14 @@ function FormComponent() {
     const [listOfUsers, setListOfUsers] = useState([]);
 
     const createUser = () => {
+
+        if(!values.pId || !values.cId || !values.cName || !values.bName || !values.tOfD || !values.domain || !values.Aptitude_round_statues || !values.HR_interview_statues || !values.Tech_interview || !values.Tech_written_statues || !values.Job_role || !values.score)
+        {
+            alert("Please fill with the whole requirement..."); 
+        
+        }
+        else{
+         
         Axios.post("http://localhost:5001/createUsers", {
             pId: values.pId,
             cId: values.cId,
@@ -72,6 +81,7 @@ function FormComponent() {
             this.score
             ]);
         });
+    }
     };
 
     const { values, errors, touched, handleChange, handleBlur, handleSubmit } = useFormik({
@@ -105,11 +115,7 @@ function FormComponent() {
 
     function handleNext() {
 
-        if (values === "") {
-            alert("Please fill the requirement...");
-
-        } else setActiveStep(next => next + 1)
-        console.log("fail")
+        setActiveStep(next => next + 1) 
     }
 
 
@@ -119,7 +125,19 @@ function FormComponent() {
     const last = () => {
         setActiveStep(prevActiveStep => 0)
     }
-    const Alert = () => {
+
+     function Alert () {
+        if(!values.pId || !values.cId || !values.cName || !values.bName || !values.tOfD || !values.domain || !values.Aptitude_round_statues || !values.HR_interview_statues || !values.Tech_interview || !values.Tech_written_statues || !values.Job_role)
+        {
+            alert("Please fill the requirement..."); 
+        
+        }
+     }
+        
+      
+
+    const Confirm = () => {
+         
         return (
             <div>
                 <div class="mt-9 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center flex" aria-modal="true" role="dialog">
@@ -130,7 +148,8 @@ function FormComponent() {
                                 <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure that you filled your details corrently this form?</h3>
                                 <button type="submit" onClick={createUser} class="text-black bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                                    Yes, I'm sure
+                                
+                                <Link to='/sucessful' > Yes I am sure</Link>
                                 </button>
                                 <button onClick={last} type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, Check it</button>
                             </div>
@@ -139,7 +158,8 @@ function FormComponent() {
                 </div>
             </div>
         )
-
+        
+        
 
     }
 
@@ -180,11 +200,12 @@ function FormComponent() {
                     </Stepper>
                     <>
 
-                        {activeStep === steps.length ?
-                            <Alert />
-                            : (
-                                <div className="flex-auto">
-                                    {getStepsContent(activeStep)}
+                        {activeStep === steps.length ? <div class="py-[40px]">
+                            <Confirm />
+                           
+                        </div> : (
+                            <div className="flex-auto">
+                                {getStepsContent(activeStep)}
 
                                     {activeStep === 0 ? <button disabled={activeStep === 0} class=" bg-gray-200 text-black font-bold p-3 rounded-md ml-[85px]" onClick={handlePervious}>
                                         Back
