@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
-        width: "50%",
+        width: "45%",
         margin: "6rem auto",
         border: "1px solid #999 round",
         "& .MuiStepIcon-root.Mui-active": {
@@ -207,16 +207,17 @@ function FormComponent() {
                             <div className="flex-auto">
                                 {getStepsContent(activeStep)}
 
-                                <button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[85px]" onClick={handlePervious}>
-                                    {activeStep === steps.length ? "" : "BACK"}
-                                </button>
+                                    {activeStep === 0 ? <button disabled={activeStep === 0} class=" bg-gray-200 text-black font-bold p-3 rounded-md ml-[85px]" onClick={handlePervious}>
+                                        Back
+                                    </button> : <button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[85px]" onClick={handlePervious}>
+                                        Back
+                                    </button>}
+                                    <button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[500px]" onChange={handleChange} onClick={handleNext}>
+                                        {activeStep === steps.length - 1 ? <Button onChange={handleChange} class="bg-orange-600 text-black"> Submit </Button> : "NEXT"}
+                                    </button>
 
-                                <button class=" bg-orange-600 text-black font-bold p-3 rounded-md ml-[400px]" onClick={handleNext}>
-                                    {activeStep === steps.length - 1 ? <Button class="bg-orange-600 text-black"> Submit </Button> : "NEXT"}
-                                </button>
-
-                            </div>
-                        )}
+                                </div>
+                            )}
                     </>
                 </form>
             </div>

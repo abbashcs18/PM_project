@@ -2,9 +2,9 @@ import React from 'react'
 import Carousel from 'better-react-carousel'
 import Footer from '../Footer';
 
+import Navbar from '../navbar/Navbar';
 import emailjs from '@emailjs/browser';
 
-import Navbar from '../navbar/Navbar';
 import wvf1 from './wvf1.jpg';
 import wvf2 from './wvf2.jpg';
 import wvf3 from './wvf3.jpg';
