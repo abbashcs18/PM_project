@@ -13,6 +13,7 @@ import ViewUsers from "./components/admin/ViewUsers";
 import EditUser from "./components/admin/EditUser";
 import Admin from "./components/admin/Admin";
 import NoFound from "./components/home/NoFound";
+import Popup from "./components/Form/Popup";
 
 import About from "./components/about/About";
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/admin/edit/:id" element={<EditUser />} />
           <Route path="/admin/user/:id" element={<ViewUsers />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/sucessful" element={<Popup />} />
           <Route path="*" element={<NoFound />} />
         </Routes>
       </Router>
