@@ -1,12 +1,9 @@
 import React from 'react'
 import Carousel from 'better-react-carousel'
 import Footer from '../Footer';
-<<<<<<< HEAD
 import emailjs from '@emailjs/browser';
 
-=======
 import Navbar from '../navbar/Navbar';
->>>>>>> e8562f8c085aad238acdbd071eb3894ea3e4888b
 import wvf1 from './wvf1.jpg';
 import wvf2 from './wvf2.jpg';
 import wvf3 from './wvf3.jpg';
@@ -87,23 +84,29 @@ const About = () => {
 
 
 
-             <div class="bg-green-500 py-10">
-         <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
+             <div class="bg-gray-500 py-10">
+         <div class="text-lime-500 text-4xl font-extrabold text-center mt-5">
          Contact Us
          </div>
     
-         <form  class="mt-12 text-3xl font-extrabold text-center  " onSubmit={sendEmail}>
-                  <div class="px-[600px]">
-                    <p>First Name</p>
-                      <input type="text"  name="first_name"
-                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your name.." required/>
-                  </div>
+         <form  class="mt-12 text-2xl font-extrabold text-center  " onSubmit={sendEmail}>
+                  
                   <div class="mt-8 px-[600px]">
                       <div>
-                            <p>Last Name</p>
-                          <input type="text" name="last_name"
-                          class="block lg:max-w-md font-normal px-4 py-2 mt-2 text-black bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your last name.." required/>
+                            <p>Full Name</p>
+                          <input type="text" name="full_name"
+                          class="block lg:max-w-md font-normal px-4 py-2 mt-2 text-black bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your full name.." required/>
                       </div>
+                      <div class="mt-8 ">
+                    <p>Email</p>
+                      <input type="email"  name="email"
+                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Email" required/>
+                  </div>
+                  <div class="mt-8 ">
+                    <p>Phone</p>
+                      <input type="phone"  name="phone"
+                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Phone number" required/>
+                  </div>
                       <div class="mb-10 mt-10">
                     <p>Country</p>
                     <select name="country" class="text-orange-600 mt-2">
