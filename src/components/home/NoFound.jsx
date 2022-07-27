@@ -4,25 +4,18 @@ import { Link } from 'react-router-dom'
 function NoFound() {
     return (
         <div>
-            <main class="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
-                <h1 class="text-9xl font-extrabold text-white tracking-widest">404</h1>
-                <div class="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
-                    Page Not Found
-                </div>
-                <button class="mt-5">
-                    <Link
-                        class="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring"
-                    >
-                        <span
-                            class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"
-                        ></span>
-
-                        <span class="relative block px-8 py-3 bg-[#1A2238] border border-current">
-                            <Link to="/">Go Home</Link>
-                        </span>
-                    </Link>
-                </button>
-            </main>
+           <section className="flex items-center h-[900px] p-16 dark:bg-gray-200 dark:text-gray-100">
+	<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+		<div className="max-w-md text-center">
+			<h2 className="mb-8 font-extrabold text-9xl dark:text-gray-600">
+				<span className="sr-only">Error</span>404
+			</h2>
+			<p className="text-2xl text-gray-500 font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+			<p className="mt-4 mb-8 dark:text-gray-400">But dont worry, you can find plenty of other things on our homepage.</p>
+			<Link to="/" rel="noopener noreferrer" className="px-8 py-3 font-semibold rounded dark:bg-orange-400 dark:text-gray-900">Back to homepage</Link>
+		</div>
+	</div>
+</section>
         </div>
     )
 }
