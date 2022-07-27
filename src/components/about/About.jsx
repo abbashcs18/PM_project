@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 const Result =()=>{
     return(
-        <p>Your message has been successfully sent. I will contact you soon</p>
+        <p class="text-green-900">Your message has been successfully sent. I will contact you soon</p>
     )
 }
 
@@ -85,46 +85,52 @@ const About = () => {
 
 
 
-             <div class="bg-gray-500 py-10">
-         <div class="text-lime-500 text-4xl font-extrabold text-center mt-5">
+             <div class="bg-slate-200 py-10">
+         <div class="text-slate-700 text-4xl px-8 font-extrabold  mt-5">
          Contact Us
          </div>
-    
-         <form  class="mt-12 text-2xl font-extrabold text-center  " onSubmit={sendEmail}>
+         <div class=" text-1xl font-normal px-16 mt-5">
+    <p>NISH address : </p>
+    <p>NISH Rd, Aakkulam, </p>
+    <p>Thiruvananthapuram, Kerala 695017</p>
+    </div>
+         <form  class="mt-12 text-2xl font-thin   " onSubmit={sendEmail}>
                   
-                  <div class="mt-8 px-[600px]">
+                  <div class="mt-1 px-[600px]">
                       <div>
-                            <p>Full Name</p>
                           <input type="text" name="full_name"
-                          class="block lg:max-w-md font-normal px-4 py-2 mt-2 text-black bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Your full name.." required/>
+                          class="block lg:max-w-md font-normal px-4 py-1 mt-1  focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40  border border-red-400" placeholder="Your full name.." required/>
+
+
+
                       </div>
                       <div class="mt-8 ">
-                    <p>Email</p>
                       <input type="email"  name="email"
-                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Email" required/>
+                      class="block  lg:max-w-md  font-normal px-4 py-1 mt-1  focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40  border border-red-400" placeholder="Email" required/>
+                      
                   </div>
                   <div class="mt-8 ">
-                    <p>Phone</p>
+                    
                       <input type="phone"  name="phone"
-                      class="block  lg:max-w-md  font-normal px-4 py-2 mt-2 text-black  bg-white border-rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 placeholder-red-300 border border-red-400" placeholder="Phone number" required/>
+                      class="block  lg:max-w-md  font-normal px-4 py-1 mt-1 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 border border-red-400" placeholder="Phone number" required/>
                   </div>
-                      <div class="mb-10 mt-10">
+                      <div class="mb-10 mt-10 text-center">
                     <p>Country</p>
-                    <select name="country" class="text-orange-600 mt-2">
+                    <select name="country" class="text-slate-700 mt-2">
                     <option value="india">India</option>
                     <option value="canada">Canada</option>
                     <option value="usa">USA</option>
                     </select>
                       </div>
-                      <p>Feedback</p>
+                      <p>Message</p>
                       <div class="mt-2  ">
                         
                         <textarea name="message" class=" font-normal text-sm py-20 px-32  " placeholder="Write something.." ></textarea>
                       </div>
 
-                      <div class="mt-8 ">
+                      <div class="mt-4 text-center">
                           <button
-                              class="w-44 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-orange-500 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-red-400">
+                              class="w-44 px-4 py-2  tracking-wide text-white transition-colors duration-200 transform bg-orange-500 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-red-400">
                               Submit
                           </button>
                           <div className='row'> {result ? <Result/>:null}</div>
