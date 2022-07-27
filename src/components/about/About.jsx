@@ -1,12 +1,11 @@
 import React from 'react'
 import Carousel from 'better-react-carousel'
 import Footer from '../Footer';
-<<<<<<< HEAD
+
 import emailjs from '@emailjs/browser';
 
-=======
+
 import Navbar from '../navbar/Navbar';
->>>>>>> e8562f8c085aad238acdbd071eb3894ea3e4888b
 import wvf1 from './wvf1.jpg';
 import wvf2 from './wvf2.jpg';
 import wvf3 from './wvf3.jpg';

@@ -120,11 +120,16 @@ function FormComponent() {
     function Alert () {
         
             
-        if(!values.pId || !values.cId || !values.cName || !values.bName || !values.tOfD || !values.domain || !values.Aptitude_round_statues || !values.HR_interview_statues || !values.Tech_interview || !values.Tech_written_statues || !values.Job_role)
-        {
-            alert("Please fill the requirement..."); 
+        // if(!values.pId || !values.cId || !values.cName || !values.bName || !values.tOfD || !values.domain || !values.Aptitude_round_statues || !values.HR_interview_statues || !values.Tech_interview || !values.Tech_written_statues || !values.Job_role)
+        // {
+        //     alert("Please fill the requirement..."); 
         
-        }
+        // }
+        // else
+        // {
+        //    
+         <Popup/>
+        
       
 
 

@@ -30,7 +30,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/interview" element={<FormComponent />} />
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Login/>} exact={true} />
+          <Route path="/" element={<Login/>} />
           <Route path="/admin/edit/:id" element={<EditUser />} />
           <Route path="/admin/user/:id" element={<ViewUsers />} />
           <Route path="/admin" element={<Admin />} />

@@ -26,18 +26,28 @@ const Admin = () => {
     };
 
     return (
+        <NavbarAdmin />,
         <div className="">
-            <NavbarAdmin />
+           
             <div className="overflow-x-auto relative">
                 <h1 className=" text-white  text-4xl font-bold">Candidates</h1>
-                <table className="w-3/4 mt-4 m-auto rounded-2xl text-sm text-left text-gray-500 dark:text-gray-400">
+                <table className="w-4/5 mt-4 m-auto rounded-2xl text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="p-6">PLACEMENT DRIVE ID</th>
                             <th scope="col" class="p-6">CANDIDATE ID</th>
                             <th scope="col" class="p-6">CANDIDATE NAME</th>
                             <th scope="col" class="p-6">BATCH NAME</th>
-                            <th scope="col" class="p-6">Action</th>
+                            <th scope="col" class="p-6">DOMAIN</th>
+                            <th scope="col" class="p-6">TYPE OF DISABILITY</th>
+                            <th scope="col" class="p-6">ATTRIBUTE ROUND STATUES</th>
+                            <th scope="col" class="p-6">TECH WRITTEN STATUES</th>
+                            <th scope="col" class="p-6">TECH INTERVIEW</th>
+                            <th scope="col" class="p-6">HR INTERVIEW STATUES</th>
+                            <th scope="col" class="p-6">JOB ROLE</th>
+                            <th scope="col" class="p-6">SCORE</th>
+                            <th scope="col" class="p-20">Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -47,7 +57,15 @@ const Admin = () => {
                                 <td class="py-4 px-6">{user.cId}</td>
                                 <td class="py-4 px-6">{user.cName}</td>
                                 <td class="py-4 px-6">{user.bName}</td>
-                                <td class=" py-4 px-6">
+                                <td class="py-4 px-6">{user.domain}</td>
+                                <td class="py-4 px-6">{user.tOfD}</td>
+                                <td class="py-4 px-6">{user.Aptitude_round_statues}</td>
+                                <td class="py-4 px-6">{user.Tech_written_statues}</td>
+                                <td class="py-4 px-6">{user.Tech_interview}</td>
+                                <td class="py-4 px-6">{user.HR_interview_statues}</td>
+                                 <td class="py-4 px-6">{user.Job_role}</td>
+                                 <td class="py-4 px-6">{user.score}</td>
+                                <td class=" relative py-6 px-20">
                                     <Link className=" bg-blue-600 text-black font-bold p-3 rounded-md m-1" to={`user/${user._id}`}>
                                         View
                                     </Link>
@@ -57,13 +75,14 @@ const Admin = () => {
                                     >
                                         Edit
                                     </Link>
-
+                                 
                                     <button
-                                        className=" bg-red-600 text-black font-bold p-3 rounded-md m-1"
+                                        className=" absolute bg-red-600 text-black font-bold p-3 rounded-md my-[-11px] "
                                         onClick={() => deleteUser(user._id)}
                                     >
-                                        Delete
+                                    Delete
                                     </button>
+                                   
                                 </td>
                             </tr>
                         ))}
