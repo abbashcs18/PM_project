@@ -38,7 +38,7 @@ const About = () => {
     <Navbar/>
         <div className="bg-white">
     <div class="text-orange-600 text-4xl font-extrabold text-center mt-5">
-        “Placements”
+        Placements
     </div>
     <div class=" text-2xl mt-5">
     Placements help trainees prepare for real-time interviews. They help to  improve the chances of getting hired. At WinVinaya, multiple mock interviews  are conducted for its trainees by handpicked industry experts. These experts  are busy professionals who are hard pressed for time to sit down and prepare  fresh questions for the interviews. The questions asked are to be aligned with the skill set of the trainee as mentioned in the resume. Further, if the candidate gets a feedback on how he/she fared in the interview and in which section or  topic he/she was weak, it would be helpful in improving their skills the next  time. An application which shall arrange the mock interview and generate  questions and also collect and generate feedback and statistics would be  beneficial for the training. Such an application would be available at the  fingertip ready to use. 
@@ -89,9 +89,9 @@ const About = () => {
          Contact Us
          </div>
          <div class=" text-1xl font-normal px-16 mt-5">
-    <p>NISH address : </p>
-    <p>NISH Rd, Aakkulam, </p>
-    <p>Thiruvananthapuram, Kerala 695017</p>
+    <p>WVF address : </p>
+    <p>Royal Residency, 55, 4th Cross Rd, BDA Layout BTM 4th Stage, </p>
+    <p>Bengaluru, Karnataka 560076</p>
     </div>
          <form  class="mt-12 text-2xl font-thin   " onSubmit={sendEmail}>
                   
